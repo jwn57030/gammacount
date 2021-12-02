@@ -17,7 +17,7 @@
 typedef struct CStatsHandle GStatsHandle;
 typedef struct CountStats   GammaStats;
 
-/* If their was something specific to gamma ray counts we needed
+/* If there was something specific to gamma ray counts we needed
    to keep track of, it could be added here. We would also
    need to add the implementation in a new .c file
    In that case we would need to define a new handle and struct

@@ -44,7 +44,7 @@ typedef struct CStatsHandle CStatsHandle;
    as you actually don't know the value before you started measurring. */
 typedef struct CountStats
 {
-    unsigned int total_counts; /* Can numbers of readings so high that this could overflow??? */
+    unsigned int total_counts; /* Can numbers of readings be so high that this could overflow? */
     unsigned int number_of_readings;
     
     /* min/max cps are instantaneous and not a moving average over a long period of time */
@@ -63,7 +63,7 @@ typedef struct CountStats
 
 /****************** Public Functions ****************/
 CStatsHandle *count_stats_new();
-void          count_stats_destroy(CStatsHandle **pp_handle);
+void count_stats_destroy(CStatsHandle **pp_handle);
 bool count_stats_reset(CStatsHandle *p_handle);
 bool count_stats_get(CStatsHandle *p_handle, CountStats *p_stats);
 bool count_stats_update(CStatsHandle *p_handle, unsigned int count);
