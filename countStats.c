@@ -21,8 +21,7 @@ struct CStatsHandle
 {
     CountStats c_stats;
 
-    /* Using mutex to make sure I am not reading partially updated data, also to
-      make sure data given back is most up to date data. */
+    /* Using mutex to make sure I am not reading partially updated data */
     pthread_mutex_t stats_lock;     
 };
 
