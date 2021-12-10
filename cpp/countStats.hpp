@@ -5,7 +5,7 @@
 * \Warning   Stats will be considered invalid until first
 *            reading is recieved.
 * \author    Jason Neitzert
-* \date      12/1/2021
+* \date      12/9/2021
 * \Copyright Jason Neitzert 
 *************************************************/
 #pragma once
@@ -57,7 +57,7 @@ typedef struct CountData
 /* Assuming lib could be used by multiple
    users/sensors in system at same time. If its one sensor only, the data
    could be stored in private global variable within the lib instead of using
-   handle. */
+   class. */
 class CountStats
 {
    public:
@@ -67,6 +67,7 @@ class CountStats
       void count_stats_reset();
       bool count_stats_get(CountData &get_data);
       void count_stats_update(unsigned int count);
+      /* Note: If required could add functions to get stats individually */
       
       /* For Testing */
       void print_stats();
@@ -77,7 +78,3 @@ class CountStats
       /* Using mutex to make sure I am not reading partially updated data */
       pthread_mutex_t stats_lock; 
 };
-
-/****************** Public Functions ****************/
-
-/* Note: If required could add functions to get stats individually */

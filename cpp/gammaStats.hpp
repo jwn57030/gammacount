@@ -3,7 +3,7 @@
 * \details   Keeps track of gamma ray statistics using 
 *            countStats lib.
 * \author    Jason Neitzert
-* \date      12/1/2021
+* \date      12/9/2021
 * \Copyright Jason Neitzert 
 *************************************************/
 #pragma once

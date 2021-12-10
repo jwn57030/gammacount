@@ -3,7 +3,7 @@
 * \details   generic lib to count something and
 *            allow user to query stats about the count.
 * \author    Jason Neitzert
-* \date      12/1/2021
+* \date      12/9/2021
 * \Copyright Jason Neitzert 
 *************************************************/
 
@@ -60,7 +60,7 @@ void CountStats::count_stats_reset()
 }
 
 /**
- * \brief   Gets the current stats for a given handle 
+ * \brief   Gets the current stats 
  * \details Stats are considered invalid until first time
  *          data is recieved after a reset or create.
  * 
@@ -91,10 +91,9 @@ bool CountStats::count_stats_get(CountData &get_stats)
 }
 
 /**
- * \brief   Adds to stats for a given handle 
+ * \brief   Adds to stats 
  * \details This function is responsible for getting time stamp
  * 
- * \param p_handle - handle to reset stats on.
  * \param count    - number of counts being reported
  * 
  * \return void
