@@ -87,7 +87,6 @@ void count_stats_destroy(CStatsHandle **pp_handle)
 bool count_stats_reset(CStatsHandle *p_handle)
 {
     bool       retval = true;
-    CountStats test   = {0};
 
     if (!p_handle)
     {
