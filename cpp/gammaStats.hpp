@@ -12,5 +12,5 @@
 #include "countStats.hpp"
 
 /****************** Class Definition **************/
-typedef CountStats GammaStats;
+class GammaStats: public CountStats{};
 typedef struct CountData GammaData;

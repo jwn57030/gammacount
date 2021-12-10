@@ -7,8 +7,6 @@
 *************************************************/
 
 /****************** Includes ************************/
-//#include <stdbool.h>
-//#include <stdio.h>
 #include <unistd.h>
 #include <iostream>
 #include "gammaStats.hpp"
@@ -27,7 +25,7 @@ using namespace std;
  */
 static void test_failure_cases_with_valid_handle(GammaStats gamma_stats)
 {
-    GammaData  gdata = {0};
+    GammaData gdata = {0};
 
     if (gamma_stats.count_stats_get(gdata))
     {
@@ -75,7 +73,7 @@ int main()
 {
     GammaStats gstats;
 
-    cout << "Start Tests\n";
+    cout << "Start Tests" << endl;
 
     test_failure_cases_with_valid_handle(gstats);
     test_good_cases_with_single_thread(gstats);
